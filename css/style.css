@@ -1,10 +1,151 @@
-* {
+*{
  margin: 0;
  padding: 0;
  box-sizing: border-box;   
 }
 
 body{
-    background-color: coral;
+    background-color: rgb(167, 82, 52);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
 
+body::after,
+body::before{
+    content: "";
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150 px);
+    opacity: 0.5;
+}
+
+body::before{
+    background-color: rgba(161, 112, 94, 0.801);
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+
+body::after{
+    background-color:rgba(57, 24, 202, 0.527);
+    right: 0;
+    top: 0;
+    transform: translate(50%);
+}
+
+a{
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+}
+.gradient-text{
+    background: linear-gradient(to right, rgb(37, 170, 88));
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+}
+.form-main{
+    min-height: 100vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-content .box{
+    border-color: blueviolet;
+    border: 1px solid rgb(43, 220, 226) ;
+    padding: 40px 50px;
+    border-radius: 20px;
+    backdrop-filter: blue;
+
+}
+
+.form-content h3{
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.2;
+    color: aqua;
+    font-weight: 500;
+}
+
+.form-content form{
+    margin: 25px 0 20px;
+}
+
+.form-content .input-box{
+    margin: 25px;
+}
+
+.form-content::placeholder{
+    color: inherit;
+    opacity: 1;
+}
+.form-content .input-control{
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid orchid;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    font-size: 16px;
+}
+.form-content .input-control:focus{
+    outline: none;
+}
+.form-content .input-link{
+    margin-top: 10px;
+    text-align: right;
+}
+
+.form-content .btn{
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    background: linear-gradient(to right, rgb(219, 151, 124), rgb(226, 121, 52));
+    border: none;
+    color: rgb(34, 78, 92);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-content .btm::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+   height: 100%;
+   transition: background-color 0.5s ease;
+   z-index: -1; 
+}
+
+.form-content .btm:hover::before{
+    background-color: black;
+}
+
+.form-content p{
+    text-align: center;
 }
